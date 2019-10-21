@@ -1,0 +1,44 @@
+{
+  "name": "observable-hook",
+  "version": "0.1.0",
+  "description": "this is a react-hook which helps you to make stores without needing context and Provider component",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "package.json",
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MHA15/observable-hook.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "context",
+    "state-amnager",
+    "redux",
+    "mobx",
+    "observable"
+  ],
+  "dependencies": {
+    "react": ">16.8.0",
+    "react-use": "^12.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.6.2",
+    "@types/react": "^16.8.0"
+  },
+  "author": "MHA15",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MHA15/observable-hook"
+  },
+  "homepage": "https://github.com/MHA15/observable-hook#readme"
+}
