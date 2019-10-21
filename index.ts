@@ -1,7 +1,7 @@
 import { useEffectOnce, useUpdate } from 'react-use';
 import { useCallback } from 'react';
 
-function createObservable(fn: (update: VoidFunction) => object) {
+export default function createObservable<T extends object>(fn: (update: VoidFunction) => T) {
     const listeners = new Set<VoidFunction>();
 
     const updateComponents = useCallback(() => {

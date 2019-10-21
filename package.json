@@ -22,7 +22,8 @@
     "react",
     "hook",
     "context",
-    "state-amnager",
+    "state-manager",
+    "store",
     "redux",
     "mobx",
     "observable"
