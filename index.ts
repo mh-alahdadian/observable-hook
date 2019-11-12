@@ -3,13 +3,11 @@ import { useCallback } from 'react';
 
 export default function createObservable<T extends object>(fn: (update: VoidFunction) => T) {
     const listeners = new Set<VoidFunction>();
-
-    const updateComponents = useCallback(() => {
-        listeners.forEach(fn => fn());
-    }, []);
+    const updateComponents = () => listeners.forEach(fn => fn());
 
     const store = fn(updateComponents);
-    const useStore = useCallback(() => {
+
+    function useStore() {
         const update = useUpdate();
         useEffectOnce(() => {
             listeners.add(update);
@@ -19,7 +17,7 @@ export default function createObservable<T extends object>(fn: (update: VoidFunc
             };
         });
         return store;
-    }, []);
+    }
 
     return [store, useStore] as const;
 }
